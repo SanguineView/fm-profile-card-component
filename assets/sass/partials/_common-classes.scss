@@ -1,0 +1,102 @@
+/* Common Classes
+---------------------------------------*/
+.container {
+	background:url(images/bg-pattern-top.svg), url(images/bg-pattern-bottom.svg), $primary;
+	background-position:-489px -489px, calc((100% + 489px)) calc((100% + 489px));
+	background-repeat: no-repeat, no-repeat;
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	display:flex;
+	justify-content: center;
+	align-items:center;
+	flex-direction:column;
+	font-family: 'Kumbh Sans', sans-serif;
+}
+
+.card {
+	background:#fff;
+	border-radius:10px;
+	max-width:350px;
+	box-shadow:20px 20px 35px rgba(0, 0, 0, 0.08);
+
+
+	&-header {
+
+		&__img {
+			border-radius:10px 10px 0 0;
+		}
+	}
+
+	&-body {
+	
+		&__bio {
+			display:flex;
+			flex-direction:column;
+			justify-content: space-between;
+			align-items:center;
+			text-align:center;
+			border-bottom:1px solid #e7e7e7;
+			padding-bottom: 20px;
+	
+			&--img {
+				margin-top:-50px;
+				margin-bottom:20px;
+				border-radius:50%;
+				border:5px solid #fff;
+			}
+			
+			&--name-age {
+				font-weight:700;
+				font-size:18px;
+				line-height:100%;
+				margin-bottom:10px;
+				margin-top:0;
+
+				span {
+					font-weight:400;
+					color: hsl(0, 0%, 59%);
+					padding-left:5px;
+				}
+			}
+
+			&--location {
+				font-size:14px;
+				margin:0;
+				line-height:100%;
+				color: hsl(0, 0%, 59%);
+			}
+		}
+
+		&__social {
+			display:flex;
+			align-items:center;
+			justify-content: center;
+			padding:25px 0;
+
+			&--details {
+				display:flex;
+				flex-direction:column;
+				justify-content: center;
+				align-content: space-between;
+				text-align: center;
+				font-size:18px;
+				font-weight: 700;
+
+				span {
+					color: hsl(0, 0%, 59%);
+					font-weight:400;
+					font-size:10px;
+					letter-spacing:1.5px;
+					margin-top:5px
+				}
+
+				&-ctr {
+					padding:0 50px;
+				}
+			}
+		}
+	}
+}

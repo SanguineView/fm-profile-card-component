@@ -1,0 +1,37 @@
+// Base Colors
+$black: #000;
+$secondary-black:#1b1b1b;
+$light-black:#333;
+$white: #fff;
+$primary: hsl(185, 75%, 39%);
+$secondary: hsl(227, 10%, 46%);
+$tertiary:#9BACBD;
+$primary-grey: #333;
+$secondary-grey:#f9f9f9;
+$tertiary-grey:#F6F9FC;
+$dark-grey:#939597;
+
+// MEDIA QUERY MANAGER
+@mixin respond($breakpoint) {
+    @if $breakpoint == dt-lg {
+        @media only screen and (min-width: 112.5em) { @content };    // 1800
+    }
+    @if $breakpoint == dt-md {
+        @media only screen and (max-width: 80em) { @content };    // 1600px
+    }
+    @if $breakpoint == dt-sm {
+        @media only screen and (max-width: 90em) { @content };    // 1440px
+    }
+    @if $breakpoint == lt-lg {
+        @media only screen and (max-width: 80em) { @content };    // 1280px
+    }
+    @if $breakpoint == lt {
+        @media only screen and (max-width: 66.25em) { @content };    // 1060px
+    }
+    @if $breakpoint == tab {
+        @media only screen and (max-width: 56.25em) { @content };     // 900px
+    }
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 47.5em) { @content };    // 760px
+    }
+}
